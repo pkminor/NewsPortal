@@ -74,6 +74,10 @@ public class App {
             return gson.toJson(dpt);
         });
 
+        get("/users", (req,res)->{
+            return  gson.toJson(userDao.getAllUsers());
+        });
+
         post("/User/new", "application/json", (req,res)->{
             User user = gson.fromJson(req.body(), User.class);
 
