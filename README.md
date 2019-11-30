@@ -6,7 +6,16 @@ Author [Patrick Maina](https://github.com/pkminor)
 NewsPortal is an Organisational news dissemination application. 
 Users can post news to the general staff or to staff in a specific department.
 
-## User Requirements    
+## User Requirements   
+
+The user would like to;
+- Create departments
+- Create news and categorize then as general or belonging to a specific department
+- Add users to a department where one department has many users
+- See individual users, their details like position,role and department.
+- See department details like name, details and number of employees in the department
+- See all users from a specific department and news relating to that department
+- Post general news or news relating s a specific department.
 
 ## How it works
 
@@ -22,13 +31,12 @@ DepartmentNews inherits from News.
 In the database, model User maps to table users, model Department maps to table departments while model
 News and model DepartmentNews map to one table news through single table inheritance.
 
-Three dao interfaces and their corresponding implementation class;
-- Interface UserDao implemented by class Sql2oUserDao
-- Interface NewsDao implemented by class Sql2oNewsDao
-- Interface DepartmentDao implemented by class Sql2oDepartmentDao
+Three dao interfaces and their corresponding implementation classes;
+- Interface UserDao implemented by class Sql2oUserDao, handles CRUD data operations related to model User.
+- Interface NewsDao implemented by class Sql2oNewsDao, handles CRUD data operations related to model News and DepartmentNews.
+- Interface DepartmentDao implemented by class Sql2oDepartmentDao, handles CRUD data operations related to model Department.
 
 # Client Side
-
 
 ## Setup Instructions
 Fork the project on github [NewsPortal ](https://github.com/pkminor/NewsPortal), then clone it to your local repo.
