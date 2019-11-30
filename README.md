@@ -3,11 +3,10 @@
 Author [Patrick Maina](https://github.com/pkminor)
 
 ## Brief description
-NewsPortal is an Organizational news dissemination application. 
+NewsPortal is an Organisational news dissemination application. 
 Users can post news to the general staff or to staff in a specific department.
 
 ## User Requirements
-
 
 ## How it works
 
