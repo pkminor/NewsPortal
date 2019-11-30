@@ -6,14 +6,14 @@ import java.util.Objects;
 public class News {
     //id, userID, type, content, postdate
     private int id;
-    private int userId;
+    private int userid;
     private String type;
     private String content;
     private Timestamp postdate;
 
     public News(int id, int userId, String type, String content, Timestamp postdate) {
         this.id = id;
-        this.userId = userId;
+        this.userid = userId;
         this.type = type;
         this.content = content;
         this.postdate = postdate;
@@ -26,10 +26,10 @@ public class News {
         this.id = id;
     }
     public int getUserId() {
-        return userId;
+        return userid;
     }
     public void setUserId(int userId) {
-        this.userId = userId;
+        this.userid = userId;
     }
     public String getType() {
         return type;
@@ -56,13 +56,13 @@ public class News {
         if (o == null || getClass() != o.getClass()) return false;
         News news = (News) o;
         return id == news.id &&
-                userId == news.userId &&
+                userid == news.userid &&
                 Objects.equals(type, news.type) &&
                 Objects.equals(content, news.content);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, userId, type, content);
+        return Objects.hash(id, userid, type, content);
     }
 }
