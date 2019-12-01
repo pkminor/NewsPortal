@@ -65,7 +65,39 @@ public class App {
 
         staticFileLocation("/public");
 
-        post("/Department/new", "application/json", (req,res)->{
+        get("/users", (req,res)->{
+            return  gson.toJson(userDao.getAllUsers());
+        });
+        get("/departments", (req,res)->{
+            return  gson.toJson(dptDao.getDepartmentWithUserCount());
+        });
+        get("/users/:id",(req,res)->{
+            int user_id = Integer.parseInt(req.params("id"));
+            return gson.toJson(userDao.findUserById(user_id));
+        });
+        get("/departments/:id",(req,res)->{
+            int dpt_id = Integer.parseInt(req.params("id"));
+            return gson.toJson(dptDao.findDepartmentById(dpt_id));
+        });
+        get("/departments/:id/users",(req,res)->{
+            int dpt_id = Integer.parseInt(req.params("id"));
+            return gson.toJson(dptDao.getDepartmentUsersById(dpt_id));
+        });
+        get("/departments/:id/news",(req,res)->{
+            int dpt_id = Integer.parseInt(req.params("id"));
+            return gson.toJson(dptDao.getDepartmentNewsById(dpt_id));
+        });
+        get("/news", (req,res)->{
+            return  gson.toJson(newsDao.getAllNews());
+        });
+        get("/news/general", (req,res)->{
+            return  gson.toJson(newsDao.getGeneralNews());
+        });
+        get("/news/department", (req,res)->{
+            return  gson.toJson(newsDao.getDepartmentNews());
+        });
+
+        post("/Departments/new", "application/json", (req,res)->{
             Department dpt = gson.fromJson(req.body(),Department.class);
 
             dptDao.addDepartment(dpt);
@@ -73,12 +105,7 @@ public class App {
             res.type("application/json");
             return gson.toJson(dpt);
         });
-
-        get("/users", (req,res)->{
-            return  gson.toJson(userDao.getAllUsers());
-        });
-
-        post("/User/new", "application/json", (req,res)->{
+        post("/Users/new", "application/json", (req,res)->{
             User user = gson.fromJson(req.body(), User.class);
 
             userDao.addUser(user);
@@ -86,7 +113,6 @@ public class App {
             res.type("application/json");
             return gson.toJson(user);
         });
-
         post("/News/new", "application/json", (req,res)->{
             News news = gson.fromJson(req.body(), News.class);
 
@@ -95,7 +121,6 @@ public class App {
             res.type("application/json");
             return gson.toJson(news);
         });
-
         post("/DepartmentNews/new", "application/json", (req,res)->{
             DepartmentNews dnews = gson.fromJson(req.body(), DepartmentNews.class);
 
@@ -103,6 +128,11 @@ public class App {
             res.status(201);
             res.type("application/json");
             return gson.toJson(dnews);
+        });
+
+        //FILTERS
+        after((req, res) ->{
+            res.type("application/json");
         });
 
     }
