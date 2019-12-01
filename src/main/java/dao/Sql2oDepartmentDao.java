@@ -21,6 +21,7 @@ public class Sql2oDepartmentDao implements DepartmentDao {
         this.sql2o = sql2o;
         this.userDao = new Sql2oUserDao(sql2o);
         this.newsDao = new Sql2oNewsDao(sql2o);
+
     }
 
     @Override
@@ -83,6 +84,16 @@ public class Sql2oDepartmentDao implements DepartmentDao {
         }
     }
 
+    public List<Department.DepartmentWithUserCount> getDepartmentWithUserCount(){
+        return getAllDepartments().stream()
+                .map(dpt->
+                  new Department.DepartmentWithUserCount(
+                          dpt.getId(),
+                          dpt.getName(),
+                          dpt.getDescription(),
+                          getDepartmentUsersById(dpt.getId()).size()
+                  )).collect(Collectors.toList());
+    }
     @Override
     public void clearAllDepartments() {
         String sql =" delete from departments";
