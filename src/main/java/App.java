@@ -10,9 +10,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
+import spark.ModelAndView;
+import spark.template.handlebars.HandlebarsTemplateEngine;
 
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.HashMap;
 
 import static spark.Spark.*;
 
@@ -64,6 +67,10 @@ public class App {
        userDao = new Sql2oUserDao(sql2o);
 
         staticFileLocation("/public");
+
+        get("/",(req,res)->{
+            res.redirect("index.html"); return null;
+        });
 
         get("/users", (req,res)->{
             return  gson.toJson(userDao.getAllUsers());
@@ -132,7 +139,7 @@ public class App {
 
         //FILTERS
         after((req, res) ->{
-            res.type("application/json");
+            //res.type("application/json");
         });
 
     }
