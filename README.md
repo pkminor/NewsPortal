@@ -76,6 +76,8 @@ If a user tries to add a user or a department that already exist, they are alert
 The departments tab in addition to showing a new department form and a listing of all departments,
 each department list items has options to view all users in that department, or all news in that department.
 
+On clicking this tags, the user can click the departments tab to go back the main departments listing, from which they
+can narrow down to another departments users or news.
 ## Setup Instructions
 Fork the project on github [NewsPortal ](https://github.com/pkminor/NewsPortal), then clone it to your local repo.
 
