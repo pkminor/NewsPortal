@@ -23,7 +23,10 @@ app.controller("appcontrol",function($scope,$http){
           if(departments.includes($scope.department_name)){
             alert("That department already exists!");
             //setTimeout(function(){$scope.btn_dept_label="Add Department";},3000);
-          }else{
+          }else if($scope.department_name.length==0 || $scope.department_desc.length==0 ){
+            alert("Please provide all inputs!");
+          }
+          else{
           
           department = {"name": $scope.department_name, "description":  $scope.department_desc};
           console.log(department);
@@ -41,6 +44,10 @@ app.controller("appcontrol",function($scope,$http){
           let users = $scope.users.map(u=>u.name);
 
           if(users.includes($scope.user_name)){alert("That user already exists");}
+          else if($scope.user_name.length==0 || $scope.user_position.length==0 ||
+                  $scope.user_role.length==0 ||$scope.user_dept.name.length==0 ){
+                    alert("Please provide all inputs!");
+          }
           else{
           
           user = {"name": $scope.user_name, "position":$scope.user_position, "role":  $scope.user_role, "departmentId":$scope.user_dept.id};
