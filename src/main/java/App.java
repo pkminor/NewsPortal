@@ -110,7 +110,8 @@ public class App {
             dptDao.addDepartment(dpt);
             res.status(201);
             res.type("application/json");
-            return gson.toJson(dpt);
+            res.redirect("/departments");
+            return null;//gson.toJson(dpt);
         });
         post("/Users/new", "application/json", (req,res)->{
             User user = gson.fromJson(req.body(), User.class);
@@ -118,7 +119,9 @@ public class App {
             userDao.addUser(user);
             res.status(201);
             res.type("application/json");
-            return gson.toJson(user);
+
+            res.redirect("/users");
+            return null; //gson.toJson(user);
         });
         post("/News/new", "application/json", (req,res)->{
             News news = gson.fromJson(req.body(), News.class);
@@ -126,7 +129,8 @@ public class App {
             newsDao.addGeneralNews(news);
             res.status(201);
             res.type("application/json");
-            return gson.toJson(news);
+             res.redirect("/news/general");
+             return null; //gson.toJson(news);
         });
         post("/DepartmentNews/new", "application/json", (req,res)->{
             DepartmentNews dnews = gson.fromJson(req.body(), DepartmentNews.class);
@@ -134,7 +138,9 @@ public class App {
             newsDao.addDepartmentNews(dnews);
             res.status(201);
             res.type("application/json");
-            return gson.toJson(dnews);
+
+            res.redirect("/news/department");
+            return null; //gson.toJson(dnews);
         });
 
         //FILTERS
