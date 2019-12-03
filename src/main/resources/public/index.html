@@ -49,15 +49,15 @@
                       <div class="m-5">
                         
                           <input type="text" ng-model="user_name" name="user_name" id="user_name"
-                                 class="form-control mb-1" placeholder="User name...">
+                                 class="form-control mb-1 border-0" placeholder="User name...">
                           <input type="text" ng-model="user_position" name="user_position" id="user_position"
-                                 class="form-control mb-1" placeholder="User position...">
+                                 class="form-control mb-1 border-0" placeholder="User position...">
                           <input type="text" ng-model="user_role" name="user_role" id="user_role"
-                                 class="form-control mb-1" placeholder="User role...">
+                                 class="form-control mb-1 border-0" placeholder="User role...">
                           <div class="input-group mb-1">
                               <button class="btn btn-success input-group-prepend">Select Department</button>
                               <select ng-model="user_dept" ng-options="d.name for d in departments"
-                              class="form-control"></select>
+                              class="form-control border-0"></select>
                           </div>
                           <button ng-click="newUser()" class="btn btn-block btn-success p-2 font-weight-bolder text-white">Add User</button>
                        
@@ -82,11 +82,11 @@
                       <div class="m-5">
                         
                           <input type="text" ng-model="department_name" name="department_name" id="department_name"
-                                 class="form-control mb-1" placeholder="Department name...">
+                                 class="form-control mb-1 border-0" placeholder="Department name...">
                           <input type="text" ng-model="department_desc" name="department_desc" id="department_desc"
-                                 class="form-control mb-1" placeholder="Department description...">
+                                 class="form-control mb-1 border-0" placeholder="Department description...">
                           <button ng-click="newDepartment()" 
-                          class="btn btn-block btn-success p-2 font-weight-bolder text-white">
+                          class="btn btn-block btn-success p-2 font-weight-bolder text-white ">
                             {{btn_dept_label}}
                           </button>
                        
@@ -156,10 +156,10 @@
                           <div class="input-group mb-1">
                               <button class="btn btn-success input-group-prepend">Select User</button>
                               <select ng-model="user" ng-options="u.name for u in users"
-                              class="form-control "></select>
+                              class="form-control border-0 "></select>
                           </div>
                           <input type="text" ng-model="news_content" name="gnews_content" id="gnews_content"
-                                  class="form-control mb-1" placeholder="News content...">
+                                  class="form-control mb-1 border-0" placeholder="News content...">
                           <button ng-click="newGeneralNews()" class="btn btn-block btn-success p-2 font-weight-bolder text-white">Post General News</button>
                        
                       </div>
@@ -188,10 +188,10 @@
                             <div class="input-group mb-1">
                               <button class="btn btn-success input-group-prepend">Select User</button>
                               <select ng-model="user" ng-options="u.name for u in users"
-                              class="form-control "></select>
+                              class="form-control border-0"></select>
                             </div>
                             <input type="text" ng-model="news_content" name="dnews_content" id="dnews_content"
-                                    class="form-control mb-1" placeholder="News content...">
+                                    class="form-control mb-1 border-0" placeholder="News content...">
                             <button ng-click="newDepartmentNews()" class="btn btn-block btn-success p-2 font-weight-bolder text-white">Post Department News</button>
                          
                       </div>
