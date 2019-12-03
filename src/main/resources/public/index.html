@@ -65,12 +65,12 @@
                       <ul class="mt-5">
                               <li ng-if="users" class="my-1" ng-repeat="user in users">
                                   <div class="shadow p-2 bg-white">
-                                      <div class="card-title">{{user.id}}</div>
+                                      <div class="card-title">ID: {{user.id}}</div>
                                       <hr>
-                                      <div class="card-text">{{user.name}}</div>
-                                      <div class="card-text">{{user.position}}</div>
-                                      <div class="card-text">{{user.role}}</div>
-                                      <div class="card-text">{{user.departmentId}}</div>
+                                      <div class="card-text">Name: {{user.name}}</div>
+                                      <div class="card-text">Position: {{user.position}}</div>
+                                      <div class="card-text">Role: {{user.role}}</div>
+                                      <div class="card-text">DepartmentID: {{user.departmentId}}</div>
                                   </div>
                               </li>
                       </ul>
@@ -96,10 +96,10 @@
                               <li ng-if="departments" class="my-1" ng-repeat="dpt in departments">
                                   <div class="shadow p-2 bg-white">
                                       
-                                          <div class="card-title">{{dpt.id}}</div>
+                                          <div class="card-title">ID: {{dpt.id}}</div>
                                           <hr>
-                                          <div class="card-text">{{dpt.name}}</div>
-                                          <div class="card-text">{{dpt.description}}</div>
+                                          <div class="card-text">Name: {{dpt.name}}</div>
+                                          <div class="card-text">Description: {{dpt.description}}</div>
     
                                           <div class="card-footer p-2">
                                             <span class="badge badge-pill bg-info p-2 m-1 text-white"
@@ -117,12 +117,12 @@
                                     <div ng-if="view_department_users">
                                       <li ng-if="department_users_list" class="my-1" ng-repeat="user in department_users_list">
                                         <div class="shadow p-2 bg-white">
-                                          <div class="card-title">{{user.id}}</div>
+                                          <div class="card-title">ID: {{user.id}}</div>
                                           <hr>
-                                          <div class="card-text">{{user.name}}</div>
-                                          <div class="card-text">{{user.position}}</div>
-                                          <div class="card-text">{{user.role}}</div>
-                                          <div class="card-text">{{user.departmentId}}</div>
+                                          <div class="card-text">Name: {{user.name}}</div>
+                                          <div class="card-text">Position: {{user.position}}</div>
+                                          <div class="card-text">Role: {{user.role}}</div>
+                                          <div class="card-text">DepartmentID: {{user.departmentId}}</div>
                                         </div>
                                       </li>
                                     </div>
@@ -131,13 +131,13 @@
                                       <div ng-if="view_department_news">
                                           <li ng-if="department_news_list" class="my-1" ng-repeat="dnews in department_news_list">
                                               <div class="shadow p-2 bg-white">
-                                                  <div class="card-title">{{dnews.id}}</div>
+                                                  <div class="card-title">ID: {{dnews.id}}</div>
                                                   <hr>
-                                                  <div class="card-text">{{dnews.userid}}</div>
-                                                  <div class="card-text">{{dnews.type}}</div>
-                                                  <div class="card-text">{{dnews.content}}</div>
-                                                  <div class="card-text">{{dnews.postdate}}</div>
-                                                  <div class="card-text">{{dnews.departmentId}}</div>
+                                                  <div class="card-text">UserID: {{dnews.userid}}</div>
+                                                  <div class="card-text">Type: {{dnews.type}}</div>
+                                                  <div class="card-text">Content: {{dnews.content}}</div>
+                                                  <div class="card-text">PostDate: {{dnews.postdate}}</div>
+                                                  <div class="card-text">DepartmentID: {{dnews.departmentId}}</div>
                                               </div>
                                           </li>
                                       </div>
@@ -167,12 +167,12 @@
                       <ul class="mt-5">
                               <li ng-if="department_news" class="my-1" ng-repeat="gnews in general_news">
                                   <div class="shadow p-2 bg-white">
-                                      <div class="card-title">{{gnews.id}}</div>
+                                      <div class="card-title">ID: {{gnews.id}}</div>
                                       <hr>
-                                      <div class="card-text">{{gnews.userid}}</div>
-                                      <div class="card-text">{{gnews.type}}</div>
-                                      <div class="card-text">{{gnews.content}}</div>
-                                      <div class="card-text">{{gnews.postdate}}</div>
+                                      <div class="card-text">UserID: {{gnews.userid}}</div>
+                                      <div class="card-text">Type: {{gnews.type}}</div>
+                                      <div class="card-text">Content: {{gnews.content}}</div>
+                                      <div class="card-text">PostDate: {{gnews.postdate}}</div>
                                      
                                   </div>
                               </li>
@@ -199,13 +199,13 @@
                       <ul class="mt-5">
                               <li ng-if="department_news" class="my-1" ng-repeat="dnews in department_news">
                                   <div class="shadow p-2 bg-white">
-                                      <div class="card-title">{{dnews.id}}</div>
+                                      <div class="card-title">ID: {{dnews.id}}</div>
                                       <hr>
-                                      <div class="card-text">{{dnews.userid}}</div>
-                                      <div class="card-text">{{dnews.type}}</div>
-                                      <div class="card-text">{{dnews.content}}</div>
-                                      <div class="card-text">{{dnews.postdate}}</div>
-                                      <div class="card-text">{{dnews.departmentId}}</div>
+                                      <div class="card-text">UserID: {{dnews.userid}}</div>
+                                      <div class="card-text">Type: {{dnews.type}}</div>
+                                      <div class="card-text">Content: {{dnews.content}}</div>
+                                      <div class="card-text">PostDate: {{dnews.postdate}}</div>
+                                      <div class="card-text">DepartmentID: {{dnews.departmentId}}</div>
                                   </div>
                               </li>
                       </ul>
