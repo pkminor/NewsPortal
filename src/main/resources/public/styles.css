@@ -2,6 +2,11 @@
 .np-filters {width:20%;position:fixed;top:0;right:0;height:100%;overflow:auto;background-color: antiquewhite;}
 .np-content {width:60%;margin:auto;}
 
+@media screen and (max-width:500px){ 
+   .np-content{width:100%} 
+   .np-controls, .np-filters {display:none;} 
+}
+
 body { background-color: #EBEFF2; user-select:none;font-family: "Trebuchet MS", Helvetica, sans-serif;}
 textarea {
    height: auto !important; resize: none;
