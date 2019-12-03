@@ -1,6 +1,6 @@
 app=angular.module("newsportal",[]);
      
-app.controller("appcontrol",function($scope,$http){
+app.controller("appcontrol",function($scope,$http,$timeout){
 
        $scope.view_departments=true;
        $scope.view_department_users=null;
@@ -15,14 +15,17 @@ app.controller("appcontrol",function($scope,$http){
        $scope.user_department="";
 
        $scope.btn_dept_label="Add Department";
+       $scope.btn_dept_class="bg-success";
 
         $scope.newDepartment=function(){
 
           let departments = $scope.departments.map(dpt=>dpt.name);
 
           if(departments.includes($scope.department_name)){
-            alert("That department already exists!");
-            //setTimeout(function(){$scope.btn_dept_label="Add Department";},3000);
+            $scope.btn_dept_label="That department already exists!";
+            $scope.btn_dept_class="bg-danger";
+            //alert("That department already exists!");
+            $timeout(function(){$scope.btn_dept_label="Add Department"; $scope.btn_dept_class="bg-success";},3000);
           }else if($scope.department_name.length==0 || $scope.department_desc.length==0 ){
             alert("Please provide all inputs!");
           }
