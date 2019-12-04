@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/pkminor/NewsPortal.svg?style=svg)](https://circleci.com/gh/pkminor/NewsPortal)
+
 # [NewsPortal ](https://github.com/pkminor/NewsPortal)
 
 Author [Patrick Maina](https://github.com/pkminor)
@@ -100,4 +102,6 @@ Pull requests are encouraged.
 
 ## License
 This project is licensed under the MIT Open Source license.
+
+
 
