@@ -101,5 +101,3 @@ Pull requests are encouraged.
 ## License
 This project is licensed under the MIT Open Source license.
 
-## Extra
-git collaboration demo
